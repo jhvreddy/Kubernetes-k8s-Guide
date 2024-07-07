@@ -19,3 +19,19 @@ Create a new pod with the nginx image, Hint: Use the kubectl run command wit
 ```
 kubectl run nginx --image=nginx
 ```
+What is the image used to create the new pods? You must look at one of the new pods in detail to figure this out,run below command and look under the containers section.
+```
+kubectl describe pod newpods-<id>
+```
+Which nodes are these pods placed on? you must look at all the pods in detail to figure this out. Run the command kubectl describe pod newpods-<id> and look at the node field.
+Alternatively run below command and check for the node the pod is placed on
+```
+kubectl get pods -o wide
+```
+How many containers are part of the pod webapp?
+```
+kubectl describe pod webapp
+```
+What images are used in the new webapp pod?
+
+
